@@ -13,6 +13,7 @@ import json, sys, pathlib, datetime, urllib.request
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 import rapp as R
+import chainio
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SPINE_HEAD = "https://raw.githubusercontent.com/kody-w/dogg/main/ticks/HEAD.json"
@@ -56,10 +57,7 @@ SOURCES = {
 }
 
 def load_chain(d):
-    if not (d / "HEAD.json").exists():
-        return []
-    count = json.loads((d / "HEAD.json").read_text())["count"]
-    return [json.loads((d / f"{i}.json").read_text()) for i in range(count)]
+    return chainio.load_chain(d)
 
 def main():
     spine = get(SPINE_HEAD)
@@ -89,9 +87,7 @@ def main():
     ok, step, why = R.verify_frame(f, head=head, stream_id_of_record=STREAM)
     if not ok:
         raise ValueError(f"refusing invalid frame: {step}: {why}")
-    (d / f"{f['seq']}.json").write_text(json.dumps(f, indent=2, ensure_ascii=False) + "\n")
-    (d / "HEAD.json").write_text(json.dumps({"count": f["seq"] + 1, "stream_id": STREAM,
-        "head_frame": f["frame_hash"], "updated": utc()}, indent=2) + "\n")
+    chainio.append_frame(d, f, STREAM)
     print(f"{THEME} frame {f['seq']} @ spine tick {tick_n}: {', '.join(data) or 'nothing'}"
           + (f" (failed: {', '.join(failed)})" if failed else ""))
 
