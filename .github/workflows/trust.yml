@@ -1,0 +1,41 @@
+name: trust
+# Accessor ratings arrive as shaped issues; a valid shape becomes a verifiable frame on
+# the public trust chain and updates the README score. Invalid shapes publish nothing.
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  issues: write
+jobs:
+  publish-rating:
+    if: contains(github.event.issue.labels.*.name, 'rating')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          set +e
+          python3 tools/trust.py
+          RC=$?
+          set -e
+          if [ "$RC" = "78" ]; then
+            gh issue comment "$ISSUE_NUMBER" --body "This doesn't match the rating form shape — nothing was published. Please use the 'Rate this node' template."
+            exit 0
+          fi
+          [ "$RC" = "0" ] || exit "$RC"
+          python3 tools/verify_thread.py
+          git config user.name "tick-node"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "trust: rating from issue #$ISSUE_NUMBER"
+          git push
+          gh issue comment "$ISSUE_NUMBER" --body "Published as a verifiable frame on the trust chain (trust/). Thank you — ratings are how good chains earn standing on the network."
+          gh issue close "$ISSUE_NUMBER"

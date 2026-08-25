@@ -1,0 +1,28 @@
+name: collect
+# The node's autonomous heartbeat: every half hour, observe under the current global
+# tick and append one frame. Runs entirely on GitHub Actions — no machine required.
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: collect
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: observe and append
+        run: |
+          set -e
+          python3 tools/collect.py
+          python3 tools/verify_thread.py
+          git config user.name "tick-node"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || { git commit -m "frame: $(date -u +%FT%TZ)"; git push; }

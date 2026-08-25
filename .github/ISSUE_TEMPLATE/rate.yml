@@ -1,0 +1,41 @@
+name: Rate this node
+description: "Accessor feedback: how reliable was this chain's data for YOUR problem? Valid ratings are published to the public trust chain automatically."
+title: "rate: "
+labels: ["rating"]
+body:
+  - type: input
+    id: accessor
+    attributes:
+      label: Accessor
+      description: Who/what used the data (an agent name, a stream id, a project).
+      placeholder: "my-agent, orient:@you/your-repo, ..."
+    validations:
+      required: true
+  - type: input
+    id: ticks
+    attributes:
+      label: Ticks used
+      description: The spine tick or range you consumed.
+      placeholder: "tick 96, or 90-120"
+    validations:
+      required: true
+  - type: input
+    id: problem
+    attributes:
+      label: Problem it was solving
+      placeholder: "orienting a cold-start agent / backtesting fee strategy / ..."
+    validations:
+      required: true
+  - type: dropdown
+    id: score
+    attributes:
+      label: Reliability score
+      description: 5 = the data was exactly right for the problem · 1 = misleading or unusable
+      options: ["5", "4", "3", "2", "1"]
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: Note (optional)
+      placeholder: what worked, what was missing, what disagreed with reality
