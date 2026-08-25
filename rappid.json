@@ -1,0 +1,13 @@
+{
+  "schema": "rapp/1",
+  "rappid": "rappid:@kody-w/dogg-planet:c9672aa97042af0016f65be8448c30e3c510ccbc26426af0470a5f4eab74ee89",
+  "kind": "node",
+  "name": "dogg-planet",
+  "host": "github.com",
+  "owner": "kody-w",
+  "repo": "dogg-planet",
+  "github": "https://github.com/kody-w/dogg-planet",
+  "parent_rappid": "rappid:@kody-w/dogg:398899d4c850bc28fabe33115c52436def0d485c34753e9bbef06e4c283892b4",
+  "minted_at": "2026-08-25T20:18:41Z",
+  "notes": "Federated node of the global tick network; descends from the spine thread. Minted once per RAPP spec \u00a76.2 \u2014 uuid-entropy tail, never a name-hash."
+}
