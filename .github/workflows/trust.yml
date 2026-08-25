@@ -27,7 +27,7 @@ jobs:
           RC=$?
           set -e
           if [ "$RC" = "78" ]; then
-            gh issue comment "$ISSUE_NUMBER" --body "This doesn't match the rating form shape — nothing was published. Please use the 'Rate this node' template."
+            gh issue comment "$ISSUE_NUMBER" --body "This doesn't match the rating form shape — nothing was published. Use the 'Rate this node' template."
             exit 0
           fi
           [ "$RC" = "0" ] || exit "$RC"
