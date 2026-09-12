@@ -1,8 +1,8 @@
 {
-  "count": 118,
+  "count": 119,
   "stream_id": "planet:@kody-w/dogg-planet",
-  "head_frame": "cd19e488e567a01fd24149588e2f6f0a36bbd4227616aef3a58bc46e9a692f8e",
-  "updated": "2026-09-12T00:33:18.677Z",
+  "head_frame": "11e4e73565977ff54933461043d61807d8db9ef49559ca1c359dba10f69ec298",
+  "updated": "2026-09-12T05:30:33.082Z",
   "epoch_size": 288,
   "sealed_epochs": 0
 }
