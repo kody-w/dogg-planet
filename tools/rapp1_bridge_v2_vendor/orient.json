@@ -1,0 +1,199 @@
+{
+ "schema": "rapp/1-anchor",
+ "generated_utc": "2026-09-02T01:31:21.000Z",
+ "stream_id": "rappid:@kody-w/rapp-1-anchor:a4298c417789ecff68b7be3df4d8b90d397c43f972eaf839977db16dbe02acc6",
+ "head": {
+  "seq": 15,
+  "frame_hash": "83ca275f35cca96e43d75c99d338326c1a39b2240eabf57eb7c29ac96cc90818",
+  "payload_hash": "1ac47416e9caf174c4fdc00265ca187c244fb701ae2a7fb7211ba1385a951310"
+ },
+ "spec": {
+  "revision": "rev-15",
+  "revision_frame_hash": "83ca275f35cca96e43d75c99d338326c1a39b2240eabf57eb7c29ac96cc90818",
+  "revision_payload_hash": "1ac47416e9caf174c4fdc00265ca187c244fb701ae2a7fb7211ba1385a951310",
+  "schema": "rapp-spec-revision/1",
+  "materialized_path": "SPEC.md",
+  "normative_path": "SPEC.md",
+  "media_type": "text/markdown; charset=utf-8",
+  "normative_sha256": "348e7d5baa94aaf2ce4c5354f3cb261f389298a04af65e271a686d3b62f7c384",
+  "normative_bytes": 79692,
+  "canonical_repo": "https://github.com/kody-w/rapp-1",
+  "commit": "58058d08c9f0e340fae07c9865647f599c32634d"
+ },
+ "registered_kinds": [
+  "body.pulse",
+  "body.re-genesis",
+  "body.reconstructed",
+  "body.twin-pulse",
+  "memory.chat-turn",
+  "memory.re-genesis",
+  "memory.reconstructed",
+  "memory.save",
+  "memory.tool-call",
+  "swarm.echo",
+  "swarm.guidance",
+  "swarm.re-genesis",
+  "swarm.reconstructed",
+  "swarm.telemetry"
+ ],
+ "vocabulary": {
+  "body": {
+   "status": "live",
+   "where": "§7.2 kind family"
+  },
+  "estate": {
+   "status": "live",
+   "where": "§9.2 egg variant"
+  },
+  "grail": {
+   "status": "live",
+   "where": "§3 terminology; §11.1 immutable Grail kernel conformance; Constitution Article 15"
+  },
+  "grown_from": {
+   "status": "live",
+   "where": "§9.4 instantiation — instance lineage key"
+  },
+  "instance": {
+   "status": "live",
+   "where": "§9.4 instantiation — a hatched install; fresh §6.2 identity, never shared"
+  },
+  "invite": {
+   "status": "live",
+   "where": "§9.2 egg variant"
+  },
+  "memory": {
+   "status": "live",
+   "where": "§7.2 kind family"
+  },
+  "metropolis": {
+   "status": "retired",
+   "where": "rapp-metropolis/1.0 tier 3; that doc is now a retirement notice in kody-w/rapp-estate — bytes only at git 24c8fdc, sha256 690f6109…"
+  },
+  "neighborhood": {
+   "status": "live",
+   "where": "§9.2 egg variant"
+  },
+  "organism": {
+   "status": "live",
+   "where": "§9.2 egg variant"
+  },
+  "rapp-frame/2.0": {
+   "status": "retired",
+   "where": "legacy envelope token, superseded by rapp/1 (§7.1)"
+  },
+  "rapp-frame/2.1": {
+   "status": "retired",
+   "where": "legacy envelope token, superseded by rapp/1 (§7.1)"
+  },
+  "rapp-protocol/1.0": {
+   "status": "retired",
+   "where": "legacy, superseded by rapp/1"
+  },
+  "rapp-rappid-spec/2.0": {
+   "status": "retired",
+   "where": "legacy, superseded by rapp/1 §6"
+  },
+  "rapplication": {
+   "status": "live",
+   "where": "§9.2 egg variant"
+  },
+  "rbox": {
+   "status": "not-in-spec",
+   "where": "operator's working word for a machine running an organism; the spec's words are `organism` (§9.2) and `instance` (§9.4)"
+  },
+  "session": {
+   "status": "live",
+   "where": "§9.2 egg variant"
+  },
+  "swarm": {
+   "status": "live",
+   "where": "§7.2 kind family"
+  },
+  "sealed": {
+   "status": "live",
+   "where": "§9.2 sealed egg variant and §9.2.1 profile"
+  },
+  "rapp-cicd": {
+   "status": "live",
+   "where": "§11.2 and protocols/rapp-cicd/1/SPEC.md"
+  },
+  "rapp-deploy": {
+   "status": "live",
+   "where": "§11.2 and protocols/rapp-deploy/1/SPEC.md"
+  },
+  "offspring": {
+   "status": "live",
+   "where": "§9.4 typed lineage and PHILOSOPHY.md"
+  },
+  "cross": {
+   "status": "live",
+   "where": "§9.4 typed multi-parent lineage and PHILOSOPHY.md"
+  },
+  "wire-freeze": {
+   "status": "live",
+   "where": "§12 and Constitution Article 18 — the rapp/1 verified forms never change; a change is rapp/2"
+  }
+ },
+ "operational_profiles": {
+  "rapp-cicd/1": {
+   "status": "live",
+   "spec_path": "protocols/rapp-cicd/1/SPEC.md",
+   "spec_sha256": "6d27d10103a3204f3b65a2e246462d197016bce5203dd510ba3ce209740e8278",
+   "schema_path": "protocols/rapp-cicd/1/schema.json",
+   "schema_sha256": "5936057868f46fc74afa00532f4aea60cfbb667c7c2f09998e1e86a0c2e629cc"
+  },
+  "rapp-deploy/1": {
+   "status": "live",
+   "spec_path": "protocols/rapp-deploy/1/SPEC.md",
+   "spec_sha256": "b5fc84465fb201fd97d7059997490a8fae5bf79ec55e935b0cfd9b4c787108e5",
+   "schema_path": "protocols/rapp-deploy/1/schema.json",
+   "schema_sha256": "aca783f3274cd865926f6b943163189fa93a7bbc4c7d4258856a54779a4a71ba"
+  }
+ },
+ "philosophy": {
+  "canonical_repository": "https://github.com/kody-w/RAPP",
+  "canonical_commit": "cb921ae59b5d762ce0bdd5493764cbb1c8b539fe",
+  "canonical_path": "PHILOSOPHY.md",
+  "canonical_sha256": "901826afd8be6e4b4bc24f83777b6d75ee29aabbff2a12655d2ab64a4e8e489c",
+  "mirror_path": "PHILOSOPHY.md",
+  "mirror_sha256": "901826afd8be6e4b4bc24f83777b6d75ee29aabbff2a12655d2ab64a4e8e489c"
+ },
+ "foundation": {
+  "schema": "rapp-foundation-pointer/1",
+  "status": "canonical-product-home",
+  "repository": "https://github.com/kody-w/RAPP",
+  "commit": "cb921ae59b5d762ce0bdd5493764cbb1c8b539fe",
+  "path": "PHILOSOPHY.md",
+  "sha256": "901826afd8be6e4b4bc24f83777b6d75ee29aabbff2a12655d2ab64a4e8e489c",
+  "size_bytes": 2633,
+  "relationship": "kody-w/RAPP is the public RAPP foundation and product home; kody-w/rapp-1 is the interoperable protocol authority"
+ },
+ "constitution": {
+  "path": "CONSTITUTION.md",
+  "sha256": "59b600d63e329de5adf11aa6dd103c82e62c72882edd899788e80fd316b21d43",
+  "size_bytes": 17403
+ },
+ "authority": {
+  "canonical_repository": "https://github.com/kody-w/rapp-1",
+  "protected_ref": "refs/heads/main",
+  "selection": "owner-ratified acceptance of the chain snapshot onto protected canonical main",
+  "linearization": "the accepted canonical-main commit containing the new frame",
+  "history_replacement": "prohibited",
+  "competing_append": "must rebase onto the accepted head and regenerate",
+  "transition": "rev-14-ratified-under-rev-13-article-14",
+  "chain_append_process": "governs-rev-15-and-later",
+  "authenticated_registry_checkpoint": null
+ },
+ "bootstrap": {
+  "index_path": "anchor/bootstrap/index.json",
+  "profile_path": "anchor/bootstrap/sha256-1666e44acf532f854d4bf74868c9af9f9b362055692189ac858a7c8b52dcd5bb.json",
+  "profile_sha256": "1666e44acf532f854d4bf74868c9af9f9b362055692189ac858a7c8b52dcd5bb",
+  "verifier_path": "anchor/bootstrap_verify.py",
+  "verifier_sha256": "4a4c19912063d5ce15cec69b1aca0cebf5df122fb1c481f357f1cf21bc0a07ff"
+ },
+ "index": {
+  "path": "anchor/index.json",
+  "sha256": "5f19ed2739c48e799ee142152f09da99488c06ee7a9100d6b67de7cf7618ca93",
+  "bytes": 7748
+ }
+}
