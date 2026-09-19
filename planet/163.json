@@ -1,0 +1,42 @@
+{
+  "spec": "rapp/1",
+  "kind": "planet.snapshot",
+  "stream_id": "planet:@kody-w/dogg-planet",
+  "seq": 163,
+  "utc": "2026-09-19T18:45:35.502Z",
+  "payload": {
+    "tick": 945,
+    "tick_frame": "db4f7e31029bb949b7bf04912c400bdc9864eec9c61adbb56804679e80da84f3",
+    "spine": "kody-w/dogg",
+    "fetched_utc": "2026-09-19T18:45:35.502Z",
+    "planet": {
+      "earthquakes_past_day": {
+        "count": 236,
+        "max_mag": "5.5"
+      },
+      "space_weather": {
+        "kp": "1.67"
+      },
+      "grid_carbon_gb": {
+        "gco2_kwh": 98,
+        "index": "moderate"
+      },
+      "iss": {
+        "lat": "26.166",
+        "lon": "69.094"
+      },
+      "city_temps_c": {
+        "tokyo": "21.5",
+        "london": "19.6",
+        "new_york": "22.5",
+        "sydney": "15.9"
+      }
+    },
+    "sources_failed": []
+  },
+  "payload_hash": "6ff582c64199e4408fea456be823b29bd48dc28f9bbd38466db00c24f188ee76",
+  "prev": "838bc892ea038ed7e928b10a38bd7694d6c13760b26e85418b3b53abb96fd29f",
+  "prev_wave": null,
+  "sig": null,
+  "frame_hash": "71279f9667d8a4c55ba42d1f9772ac7285e058bf0a234e4f7af60573c338bf6c"
+}
